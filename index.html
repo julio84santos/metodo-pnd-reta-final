@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Método PND Reta Final — Material Completo para a Prova Nacional Docente 2026</title>
+<meta name="description" content="Mapas mentais, simulados comentados, kit da discursiva, planner de estudos e mais para usar até a véspera da Prova Nacional Docente 2026.">
+<style>
+  :root{
+    --bg:#f6f8fb;
+    --bg-soft:#ffffff;
+    --card:#ffffff;
+    --card-border:#e4e9f2;
+    --text:#182338;
+    --text-muted:#5c6b84;
+    --accent:#3657a5;
+    --accent-soft:#eaf0fa;
+    --accent-2:#00a758;
+    --gold:#e0a800;
+    --gold-soft:#fff8e1;
+    --cta:#00a758;
+    --cta-dark:#00873f;
+    --danger:#c94b3f;
+    --radius:16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.55;
+  }
+  a{color:inherit;}
+  .container{max-width:1100px;margin:0 auto;padding:0 20px;}
+  .badge{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--accent-soft);
+    border:1px solid #cfe0f7;
+    color:var(--accent);
+    padding:9px 20px;border-radius:999px;
+    font-size:16px;font-weight:700;letter-spacing:.3px;
+  }
+  .badge .dot{width:9px;height:9px;border-radius:50%;background:var(--cta);display:inline-block;}
+  .seal{display:flex;justify-content:center;margin-bottom:20px;}
+  .seal img{height:92px;width:auto;}
+  .unofficial-note{
+    display:block;margin-top:16px;color:var(--text-muted);font-size:13px;
+  }
+  .trust-bar{
+    margin-top:30px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap;
+    color:var(--text-muted);font-size:14.5px;
+  }
+  .trust-bar span{display:flex;align-items:center;gap:6px;}
+  .countdown{
+    margin-top:30px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;
+  }
+  .countdown .box{
+    background:var(--card);border:1px solid var(--card-border);border-radius:14px;
+    padding:14px 20px;min-width:88px;text-align:center;
+    box-shadow:0 2px 8px rgba(24,35,56,.05);
+  }
+  .countdown .box .n{font-size:30px;font-weight:800;color:var(--accent);display:block;line-height:1;}
+  .countdown .box .l{font-size:12px;color:var(--text-muted);letter-spacing:.4px;text-transform:uppercase;}
+  header.hero{padding:64px 0 40px;text-align:center;}
+  header.hero h1{
+    font-size:clamp(32px,5.2vw,50px);
+    margin:24px 0 16px;
+    font-weight:800;
+    letter-spacing:-.5px;
+    color:var(--text);
+  }
+  header.hero p.lead{
+    max-width:700px;margin:0 auto;color:var(--text-muted);
+    font-size:19px;
+  }
+  .countdown-strip{
+    margin-top:26px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap;
+  }
+  .pill{
+    background:var(--card);border:1px solid var(--card-border);
+    padding:10px 18px;border-radius:11px;font-size:15px;color:var(--text-muted);
+  }
+  .pill b{color:var(--text);}
+
+  section{padding:52px 0;}
+  h2.section-title{
+    text-align:center;font-size:clamp(22px,3.2vw,30px);margin:0 0 8px;font-weight:800;
+    color:var(--text);
+  }
+  p.section-sub{text-align:center;color:var(--text-muted);max-width:620px;margin:0 auto 36px;}
+
+  /* Includes grid */
+  .includes-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;
+  }
+  .item-card{
+    background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius);
+    padding:20px;box-shadow:0 1px 3px rgba(24,35,56,.04);
+  }
+  .item-card .num{
+    display:inline-block;font-size:12px;font-weight:700;color:var(--accent);
+    background:var(--accent-soft);border-radius:6px;padding:2px 8px;margin-bottom:10px;
+  }
+  .item-card h3{margin:0 0 6px;font-size:16px;color:var(--text);}
+  .item-card p{margin:0;color:var(--text-muted);font-size:14px;}
+
+  /* Pricing */
+  .pricing-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;
+  }
+  @media (max-width:820px){.pricing-grid{grid-template-columns:1fr;}}
+  .plan{
+    position:relative;
+    background:var(--card);
+    border:1px solid var(--card-border);
+    border-radius:20px;
+    padding:32px 28px 28px;
+    display:flex;flex-direction:column;
+    box-shadow:0 2px 10px rgba(24,35,56,.05);
+  }
+  .plan.featured{
+    border:2px solid var(--gold);
+    box-shadow:0 16px 40px -18px rgba(201,138,0,.35);
+    background:linear-gradient(180deg, var(--gold-soft), var(--card) 45%);
+  }
+  .plan .ribbon{
+    position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+    background:var(--gold);color:#fff;font-weight:800;font-size:12px;
+    padding:6px 16px;border-radius:999px;letter-spacing:.4px;
+    box-shadow:0 6px 16px -4px rgba(201,138,0,.5);
+  }
+  .plan h3.plan-name{margin:6px 0 4px;font-size:20px;font-weight:800;color:var(--text);}
+  .plan p.plan-desc{color:var(--text-muted);font-size:14px;margin:0 0 18px;min-height:40px;}
+  .plan .off-badge{
+    display:inline-block;background:#fdeceb;color:var(--danger);
+    border:1px solid #f6c9c4;font-size:12px;font-weight:800;
+    padding:3px 10px;border-radius:999px;margin-bottom:10px;letter-spacing:.3px;
+  }
+  .plan .price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:4px;flex-wrap:wrap;}
+  .plan .price-row .old{color:var(--text-muted);text-decoration:line-through;font-size:16px;}
+  .plan .price-row .currency{font-size:18px;color:var(--text-muted);}
+  .plan .price-row .price{font-size:42px;font-weight:800;letter-spacing:-1px;color:var(--text);}
+  .plan .price-note{color:var(--text-muted);font-size:13px;margin-bottom:22px;}
+  .plan ul.features{list-style:none;padding:0;margin:0 0 24px;flex:1;}
+  .plan ul.features li{
+    display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;font-size:14.5px;
+  }
+  .plan ul.features li .check{
+    flex:0 0 auto;width:20px;height:20px;border-radius:50%;
+    background:#e4f5ec;color:var(--accent-2);
+    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;
+    margin-top:1px;
+  }
+  .plan ul.features li.locked .check{
+    background:#eef1f6;color:#a6b0c3;
+  }
+  .plan ul.features li.locked .txt b{color:#8b95a8;}
+  .plan ul.features li .txt b{display:block;color:var(--text);}
+  .plan ul.features li .txt span{color:var(--text-muted);font-size:13px;}
+  .cta-btn{
+    display:block;text-align:center;text-decoration:none;
+    padding:16px 20px;border-radius:12px;font-weight:800;font-size:16px;
+    background:linear-gradient(135deg,var(--cta),var(--cta-dark));color:#fff;
+    box-shadow:0 10px 24px -10px rgba(212,88,28,.55);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .cta-btn:hover{transform:translateY(-2px);}
+  .plan .guarantee{
+    text-align:center;color:var(--text-muted);font-size:12.5px;margin-top:12px;
+  }
+  .plan .addendum-note{
+    margin-top:18px;background:var(--gold-soft);border:1px dashed #e3bd66;
+    border-radius:10px;padding:12px 14px;font-size:13px;color:#8a5b00;
+  }
+
+  /* comparison note */
+  .fine-print{text-align:center;color:var(--text-muted);font-size:13px;margin-top:28px;}
+
+  /* method steps */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;}
+  .step{
+    background:var(--card);border:1px solid var(--card-border);border-radius:14px;
+    padding:18px;text-align:center;box-shadow:0 1px 3px rgba(24,35,56,.04);
+  }
+  .step .step-num{
+    width:34px;height:34px;border-radius:50%;background:var(--accent-soft);
+    color:var(--accent);display:flex;align-items:center;justify-content:center;
+    font-weight:800;margin:0 auto 10px;
+  }
+  .step h4{margin:0 0 6px;font-size:14.5px;color:var(--text);}
+  .step p{margin:0;color:var(--text-muted);font-size:13px;}
+
+  /* Compare section */
+  .compare-img{display:flex;justify-content:center;margin-bottom:36px;}
+  .compare-img img{width:100%;max-width:820px;border-radius:18px;box-shadow:0 16px 40px -18px rgba(24,35,56,.3);}
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  @media (max-width:820px){.compare-grid{grid-template-columns:1fr;}}
+  .compare-card{border-radius:16px;padding:26px 24px;}
+  .compare-card.bad{background:#fdf1ef;border:1px solid #f4d4cd;}
+  .compare-card.good{background:#eaf7f0;border:1px solid #bfe6cf;}
+  .compare-card h3{margin:0 0 14px;font-size:17px;display:flex;align-items:center;gap:8px;}
+  .compare-card.bad h3{color:#a83b2a;}
+  .compare-card.good h3{color:#146b3f;}
+  .compare-card ul{margin:0;padding-left:20px;}
+  .compare-card li{margin-bottom:9px;font-size:14.5px;color:var(--text);}
+
+  /* FAQ */
+  details{
+    background:var(--card);border:1px solid var(--card-border);border-radius:12px;
+    padding:16px 20px;margin-bottom:12px;
+  }
+  details summary{cursor:pointer;font-weight:700;list-style:none;color:var(--text);}
+  details summary::-webkit-details-marker{display:none;}
+  details summary::after{content:"+";float:right;color:var(--accent);font-size:20px;}
+  details[open] summary::after{content:"–";}
+  details p{color:var(--text-muted);margin:12px 0 0;font-size:14.5px;}
+
+  footer{
+    padding:36px 0 60px;text-align:center;color:var(--text-muted);font-size:13px;
+    border-top:1px solid var(--card-border);margin-top:16px;
+  }
+
+  .sticky-cta{
+    position:fixed;bottom:0;left:0;right:0;
+    background:rgba(255,255,255,.95);backdrop-filter:blur(8px);
+    border-top:1px solid var(--card-border);
+    padding:12px 16px;display:flex;justify-content:center;gap:12px;z-index:50;
+    box-shadow:0 -4px 16px rgba(24,35,56,.06);
+  }
+  .sticky-cta a{padding:10px 18px;border-radius:10px;font-weight:700;font-size:14px;text-decoration:none;}
+  .sticky-cta .a1{background:var(--accent-soft);color:var(--accent);border:1px solid #cfe0f7;}
+  .sticky-cta .a2{background:linear-gradient(135deg,var(--cta),var(--cta-dark));color:#fff;}
+  @media (min-width:781px){.sticky-cta{display:none;}}
+  body{padding-bottom:70px;}
+  @media (min-width:781px){body{padding-bottom:0;}}
+
+  /* Top bar (desktop) */
+  .top-bar{
+    display:none;position:sticky;top:0;left:0;right:0;z-index:60;
+    background:rgba(255,255,255,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--card-border);
+  }
+  @media (min-width:901px){.top-bar{display:block;}}
+  .top-bar .container{display:flex;align-items:center;justify-content:space-between;padding:10px 20px;}
+  .top-bar .top-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px;color:var(--text);}
+  .top-bar .top-brand img{height:26px;width:auto;}
+  .top-bar nav{display:flex;gap:22px;font-size:13.5px;color:var(--text-muted);}
+  .top-bar nav a{text-decoration:none;}
+  .top-bar nav a:hover{color:var(--text);}
+  .top-bar .top-cta{
+    background:linear-gradient(135deg,var(--cta),var(--cta-dark));color:#fff;
+    padding:9px 18px;border-radius:9px;font-weight:800;font-size:13.5px;text-decoration:none;
+  }
+
+  /* Hero CTA buttons */
+  .hero-ctas{margin-top:26px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+  .btn-primary{
+    display:inline-block;text-decoration:none;text-align:center;
+    padding:15px 26px;border-radius:12px;font-weight:800;font-size:15.5px;
+    background:linear-gradient(135deg,var(--cta),var(--cta-dark));color:#fff;
+    box-shadow:0 10px 24px -10px rgba(0,135,63,.5);
+    transition:transform .15s ease;
+  }
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-secondary{
+    display:inline-block;text-decoration:none;text-align:center;
+    padding:15px 22px;border-radius:12px;font-weight:700;font-size:15.5px;
+    background:var(--card);color:var(--text);border:1px solid var(--card-border);
+  }
+
+  /* Mid-page CTA banner */
+  .mid-cta{
+    text-align:center;padding:34px 24px;border-radius:20px;
+    background:linear-gradient(135deg,#0f2a4d,#1a3f73);
+    margin:0 auto;
+  }
+  .mid-cta p{color:#dce6f5;margin:0 0 16px;font-size:15px;}
+  .mid-cta .btn-primary{box-shadow:0 10px 24px -10px rgba(0,0,0,.4);}
+
+  /* Guarantee section */
+  .guarantee-box{
+    display:flex;align-items:center;gap:22px;background:var(--card);
+    border:1px solid var(--card-border);border-radius:20px;padding:30px;
+    max-width:820px;margin:0 auto;box-shadow:0 2px 10px rgba(24,35,56,.05);
+  }
+  @media (max-width:600px){.guarantee-box{flex-direction:column;text-align:center;}}
+  .guarantee-box .g-icon{
+    flex:0 0 auto;width:64px;height:64px;border-radius:50%;background:#eaf7f0;
+    display:flex;align-items:center;justify-content:center;font-size:30px;
+  }
+  .guarantee-box h3{margin:0 0 6px;font-size:18px;color:var(--text);}
+  .guarantee-box p{margin:0;color:var(--text-muted);font-size:14.5px;}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="top-brand"><img src="logo-pnd.png" alt=""> Método PND Reta Final</div>
+    <nav>
+      <a href="#comparativo">Por que funciona</a>
+      <a href="#conteudo">O que tem dentro</a>
+      <a href="#planos">Planos</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <a href="#planos" class="top-cta">Quero garantir meu acesso</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div class="seal">
+      <img src="logo-pnd.png" alt="Prova Nacional Docente">
+    </div>
+    <span class="badge"><span class="dot"></span> MÉTODO PND RETA FINAL · EDIÇÃO 2026</span>
+    <h1>Tudo o que você precisa para a<br>Prova Nacional Docente 2026</h1>
+    <p class="lead">Mapas mentais, simulados comentados, kit da discursiva, planner de estudos e painel de desempenho — um método completo, direto ao ponto, para usar desde já até a véspera do dia 20 de setembro.</p>
+    <div class="countdown-strip">
+      <span class="pill">📅 Prova: <b>20 de setembro de 2026</b></span>
+      <span class="pill">📦 <b>17 materiais</b> em PDF + planilha</span>
+      <span class="pill">🎯 Use <b>até a véspera da prova</b></span>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#planos" class="btn-primary">Quero garantir meu acesso agora</a>
+      <a href="#conteudo" class="btn-secondary">Ver o que está incluso</a>
+    </div>
+
+    <div class="countdown" id="countdown" aria-label="Contagem regressiva até a Prova Nacional Docente 2026">
+      <div class="box"><span class="n" id="cd-days">–</span><span class="l">dias</span></div>
+      <div class="box"><span class="n" id="cd-hours">–</span><span class="l">horas</span></div>
+      <div class="box"><span class="n" id="cd-min">–</span><span class="l">min</span></div>
+      <div class="box"><span class="n" id="cd-sec">–</span><span class="l">seg</span></div>
+    </div>
+    <p class="unofficial-note">faltam para a Prova Nacional Docente · 20/09/2026</p>
+
+    <div class="trust-bar">
+      <span>🛡️ Pagamento processado por link seguro</span>
+      <span>📘 Atualizado com o edital oficial da PND 2026</span>
+      <span>⚡ Acesso liberado na hora</span>
+    </div>
+    <span class="unofficial-note">Material de apoio extraoficial, produzido de forma independente. Não tem vínculo com o INEP, o MEC ou o site oficial da PND.</span>
+  </div>
+</header>
+
+<section id="comparativo" style="background:var(--bg-soft);border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);">
+  <div class="container">
+    <h2 class="section-title">Estudar sozinho é possível. Estudar com direção é mais rápido.</h2>
+    <p class="section-sub">A diferença não é esforço — as duas alunas da imagem estão estudando. A diferença é ter um método que organiza o que fazer a cada dia.</p>
+    <div class="compare-img">
+      <img src="comparativo-metodo.png" alt="Duas candidatas estudando para a PND: uma cercada de editais, portarias e resumos soltos sem organização; outra usando mapa mental, planner e kit da discursiva do Método PND Reta Final">
+    </div>
+    <div class="compare-grid">
+      <div class="compare-card bad">
+        <h3>😩 Estudando sozinho, sem método</h3>
+        <ul>
+          <li>Pilhas de edital, portaria e legislação sem saber por onde começar</li>
+          <li>Resumos espalhados, feitos do zero, sem critério do que realmente cai</li>
+          <li>Nenhuma forma de saber se está evoluindo ou só girando em círculo</li>
+          <li>Discursiva sem estrutura, sem critério oficial e sem correção</li>
+          <li>Sensação constante de atraso, mesmo estudando todos os dias</li>
+        </ul>
+      </div>
+      <div class="compare-card good">
+        <h3>✅ Com o Método PND Reta Final</h3>
+        <ul>
+          <li>Mapa mental pronto, organizado por eixo — você só revisa e marca o que falta</li>
+          <li>Planner diário: uma tarefa clara por vez, sem adivinhação</li>
+          <li>Painel de desempenho mostrando exatamente onde focar</li>
+          <li>Kit da Discursiva com critérios oficiais, modelos e correção guiada</li>
+          <li>Rotina objetiva, possível de manter até a véspera da prova</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mid-cta" style="margin-top:40px;">
+      <p>Chega de estudar sem saber se está no caminho certo.</p>
+      <a href="#planos" class="btn-primary">Quero começar com o método agora</a>
+    </div>
+  </div>
+</section>
+
+<section id="metodo">
+  <div class="container">
+    <h2 class="section-title">Como o método funciona</h2>
+    <p class="section-sub">Um ciclo simples que se repete: diagnosticar, priorizar, estudar, recuperar da memória, praticar, corrigir e revisar.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h4>Mapeie</h4><p>Estude os Mapas Mentais e marque só o que ainda não domina.</p></div>
+      <div class="step"><div class="step-num">2</div><h4>Diagnostique</h4><p>Faça o Simulado Comentado e descubra seus eixos fracos.</p></div>
+      <div class="step"><div class="step-num">3</div><h4>Pratique</h4><p>Use o Kit da Discursiva para treinar redação com critérios oficiais.</p></div>
+      <div class="step"><div class="step-num">4</div><h4>Corrija</h4><p>Aplique o Checklist de Autocorreção e reescreva o que faltou.</p></div>
+      <div class="step"><div class="step-num">5</div><h4>Revise</h4><p>Volte ao conteúdo em 24h, 7 e 14 dias com o Caderno de Revisão Ativa.</p></div>
+      <div class="step"><div class="step-num">6</div><h4>Meça</h4><p>Registre tudo no Painel de Desempenho e ajuste a rota.</p></div>
+    </div>
+    <div class="mid-cta" style="margin-top:40px;">
+      <p>Esse ciclo já está montado dentro do método. Você só precisa seguir.</p>
+      <a href="#planos" class="btn-primary">Quero acessar o método</a>
+    </div>
+  </div>
+</section>
+
+<section id="conteudo" style="background:var(--bg-soft);border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);">
+  <div class="container">
+    <h2 class="section-title">O que tem dentro do método</h2>
+    <p class="section-sub">11 peças construídas para se conectarem — cada material aponta para o próximo passo do seu estudo.</p>
+    <div class="includes-grid">
+      <div class="item-card"><span class="num">PEÇA 1</span><h3>Mapas Mentais PND 2026</h3><p>Organizam todo o conteúdo cobrado por eixo temático para revisão rápida.</p></div>
+      <div class="item-card"><span class="num">PEÇA 2</span><h3>Kit da Discursiva</h3><p>Método de 30 linhas, 6 critérios oficiais, 6 propostas e 20 frases-coringa com modelos comentados.</p></div>
+      <div class="item-card"><span class="num">PEÇA 3</span><h3>Simulado Diagnóstico Comentado</h3><p>30 questões inéditas de Formação Geral Docente com gabarito comentado alternativa por alternativa.</p></div>
+      <div class="item-card"><span class="num">PEÇA 4</span><h3>Planner PND · 7 Semanas</h3><p>49 tarefas diárias, revisão espaçada, 6 discursivas e 2 simulados até a prova.</p></div>
+      <div class="item-card"><span class="num">PEÇA 5</span><h3>Caderno de Revisão Ativa</h3><p>45 perguntas em 9 eixos para reconstrução de memória com revisão em 24h, 7 e 14 dias.</p></div>
+      <div class="item-card"><span class="num">PEÇA 6</span><h3>Painel de Desempenho</h3><p>Planilha para registrar simulados, discursivas e evolução por eixo ao longo do seu estudo.</p></div>
+      <div class="item-card"><span class="num">PEÇA 7</span><h3>Reta Final · 10 Dias</h3><p>Roteiro concentrado para quem está nos últimos 10 dias antes da prova.</p></div>
+      <div class="item-card"><span class="num">PEÇA 8</span><h3>Radar Legislativo 2026</h3><p>Atualizações do novo PNE, Sistema Nacional de Educação e pontos que apostilas antigas erram.</p></div>
+      <div class="item-card"><span class="num">PEÇA 9</span><h3>Checklist de Autocorreção</h3><p>10 critérios para revisar sua discursiva e transformar correção em reescrita.</p></div>
+      <div class="item-card"><span class="num">PEÇA 10</span><h3>Guia de Uso do Método</h3><p>Como combinar todos os materiais com 20, 40 ou 60 minutos de estudo por dia.</p></div>
+      <div class="item-card"><span class="num">PEÇA 11</span><h3>Simulados Específicos (5 volumes)</h3><p>Mais de 400 questões autorais por área de atuação, com comentários alternativa por alternativa.</p></div>
+    </div>
+    <div class="mid-cta" style="margin-top:40px;">
+      <p>17 materiais, um método, um preço acessível. Vamos começar?</p>
+      <a href="#planos" class="btn-primary">Quero ver os planos e preços</a>
+    </div>
+  </div>
+</section>
+
+<section id="planos">
+  <div class="container">
+    <h2 class="section-title">Escolha seu plano</h2>
+    <p class="section-sub">Os dois planos usam a mesma base do método. A diferença é o alcance: geral ou geral + específico por área, com atualizações futuras incluídas.</p>
+
+    <div class="pricing-grid">
+
+      <!-- PLANO 1 -->
+      <div class="plan">
+        <h3 class="plan-name">Pacote Essencial</h3>
+        <p class="plan-desc">A base completa do Método PND Reta Final — tudo o que você precisa para estudar Formação Geral Docente do zero até a véspera da prova.</p>
+        <span class="off-badge">60% OFF · preço de lançamento</span>
+        <div class="price-row">
+          <span class="old">R$ 49,90</span>
+          <span class="currency">R$</span>
+          <span class="price">19,90</span>
+        </div>
+        <p class="price-note">pagamento único · acesso imediato</p>
+        <ul class="features">
+          <li><span class="check">✓</span><div class="txt"><b>Mapas Mentais PND 2026</b><span>Todos os eixos de Formação Geral Docente</span></div></li>
+          <li><span class="check">✓</span><div class="txt"><b>Kit da Discursiva</b><span>Método, critérios oficiais e modelos comentados</span></div></li>
+          <li><span class="check">✓</span><div class="txt"><b>Simulado Diagnóstico Comentado</b><span>30 questões com gabarito comentado</span></div></li>
+          <li><span class="check">✓</span><div class="txt"><b>Planner de 7 Semanas</b><span>49 tarefas diárias até a prova</span></div></li>
+          <li><span class="check">✓</span><div class="txt"><b>Caderno de Revisão Ativa</b><span>45 perguntas com revisão espaçada</span></div></li>
+          <li><span class="check">✓</span><div class="txt"><b>Painel de Desempenho (planilha)</b><span>Acompanhe sua evolução</span></div></li>
+          <li><span class="check">✓</span><div class="txt"><b>Reta Final · 10 Dias + Checklist + Radar Legislativo + Guia de Uso</b><span>Bônus completos do método</span></div></li>
+          <li class="locked"><span class="check">＋</span><div class="txt"><b>Simulados Específicos por área (5 volumes)</b><span>Disponível apenas no Pacote Completo</span></div></li>
+          <li class="locked"><span class="check">＋</span><div class="txt"><b>Banco Turbo (120 questões) + Discursiva Intensiva</b><span>Disponível apenas no Pacote Completo</span></div></li>
+          <li class="locked"><span class="check">＋</span><div class="txt"><b>Materiais extras futuros</b><span>Disponível apenas no Pacote Completo</span></div></li>
+        </ul>
+        <a href="https://pay.hotmart.com/C107081055O" class="cta-btn" id="cta-plano-1">Quero garantir meu Pacote Essencial</a>
+        <p class="guarantee">🛡️ Garantia de 7 dias + acesso vitalício aos arquivos</p>
+      </div>
+
+      <!-- PLANO 2 -->
+      <div class="plan featured">
+        <span class="ribbon">MAIS COMPLETO</span>
+        <h3 class="plan-name">Pacote Completo + Atualizações</h3>
+        <p class="plan-desc">Tudo do Pacote Essencial, mais os 5 volumes de Simulados Específicos por área e todo material novo que eu for lançando dentro do Método PND.</p>
+        <span class="off-badge">58% OFF · preço de lançamento</span>
+        <div class="price-row">
+          <span class="old">R$ 59,90</span>
+          <span class="currency">R$</span>
+          <span class="price">24,90</span>
+        </div>
+        <p class="price-note">pagamento único · acesso imediato</p>
+        <ul class="features">
+          <li><span class="check">✓</span><div class="txt"><b>Todo o conteúdo do Pacote Essencial</b><span>As 10 primeiras peças do método</span></div></li>
+          <li><span class="check">✓</span><div class="txt"><b>Simulados Específicos — Volumes 1 a 5</b><span>Mais de 400 questões por área de atuação, com comentários</span></div></li>
+          <li><span class="check">✓</span><div class="txt"><b>Banco Turbo — 120 questões extras</b><span>4 mini simulados de 30 questões, com gabarito comentado e mapa de desempenho</span></div></li>
+          <li><span class="check">✓</span><div class="txt"><b>Discursiva Intensiva</b><span>10 novas situações-problema com repertório, modelo comentado e espelho de correção</span></div></li>
+          <li><span class="check">✓</span><div class="txt"><b>Acesso a novos materiais do método</b><span>Futuros lançamentos do Método PND entram automaticamente no seu acesso</span></div></li>
+          <li><span class="check">✓</span><div class="txt"><b>Prioridade em avisos de atualização</b><span>Você é avisado assim que um novo material sai</span></div></li>
+        </ul>
+        <a href="https://pay.hotmart.com/Y107081480X?checkoutMode=10" class="cta-btn" id="cta-plano-2">Quero garantir meu Pacote Completo</a>
+        <p class="guarantee">🛡️ Garantia de 7 dias + acesso vitalício e atualizações inclusas</p>
+        <div class="addendum-note">📦 Este pacote já inclui os Treinos Extras (Banco Turbo + Discursiva Intensiva) e receberá novos materiais sem custo extra.</div>
+      </div>
+
+    </div>
+
+    <p class="fine-print">Pagamento processado por link externo seguro. Após a confirmação, você recebe o acesso aos arquivos por e-mail.</p>
+  </div>
+</section>
+
+<section id="garantia" style="background:var(--bg-soft);border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);">
+  <div class="container">
+    <div class="guarantee-box">
+      <div class="g-icon">🛡️</div>
+      <div>
+        <h3>Garantia incondicional de 7 dias</h3>
+        <p>Se por qualquer motivo o método não for para você, é só pedir o reembolso em até 7 dias após a compra — sem perguntas, sem burocracia. O risco é todo meu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--bg-soft);border-top:1px solid var(--card-border);">
+  <div class="container">
+    <h2 class="section-title">Perguntas frequentes</h2>
+    <div style="max-width:720px;margin:0 auto;">
+      <details>
+        <summary>Qual a diferença entre os dois pacotes?</summary>
+        <p>O Pacote Essencial traz as 10 primeiras peças do método (mapas, discursiva, simulado geral, planner, revisão ativa, painel de desempenho e bônus). O Pacote Completo inclui tudo isso mais os 5 volumes de Simulados Específicos por área e os materiais extras que forem lançados depois, sem custo adicional.</p>
+      </details>
+      <details>
+        <summary>Os materiais servem para qual concurso?</summary>
+        <p>Os materiais foram construídos para a Prova Nacional Docente (PND) 2026, com base nas matrizes de referência divulgadas para o exame.</p>
+      </details>
+      <details>
+        <summary>Em que formato recebo o material?</summary>
+        <p>PDFs para os cadernos, mapas e simulados, e uma planilha (Excel) para o Painel de Desempenho.</p>
+      </details>
+      <details>
+        <summary>Como recebo o acesso após a compra?</summary>
+        <p>Após a confirmação do pagamento no link de checkout, o acesso aos arquivos é liberado automaticamente por e-mail.</p>
+      </details>
+      <details>
+        <summary>Se eu comprar o Pacote Essencial, posso migrar para o Completo depois?</summary>
+        <p>Sim. Fale comigo e você paga apenas a diferença para migrar de pacote.</p>
+      </details>
+      <details>
+        <summary>E se eu não gostar do material?</summary>
+        <p>Você tem garantia incondicional de 7 dias a partir da compra. Se não for para você, é só pedir o reembolso — sem burocracia.</p>
+      </details>
+    </div>
+    <div class="mid-cta" style="margin-top:40px;">
+      <p>Ainda com dúvida? A garantia de 7 dias cobre sua decisão.</p>
+      <a href="#planos" class="btn-primary">Quero garantir meu acesso</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Método PND Reta Final · Material de apoio para a Prova Nacional Docente 2026 · Garantia incondicional de 7 dias.</p>
+    <p>Questões autorais e prospectivas, elaboradas a partir das matrizes de referência divulgadas para o exame. Não são questões oficiais nem reproduzem itens do Banco Nacional de Itens (BNI). Consulte sempre as normas oficiais vigentes.</p>
+    <p>© 2026 · Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="#planos" class="a1">Ver planos</a>
+  <a href="#planos" class="a2">Quero garantir meu acesso</a>
+</div>
+
+<script>
+(function(){
+  var examDate = new Date("2026-09-20T08:00:00-03:00").getTime();
+  var elD = document.getElementById("cd-days");
+  var elH = document.getElementById("cd-hours");
+  var elM = document.getElementById("cd-min");
+  var elS = document.getElementById("cd-sec");
+  function tick(){
+    var now = new Date().getTime();
+    var diff = examDate - now;
+    if(diff <= 0){
+      elD.textContent = "0"; elH.textContent = "0"; elM.textContent = "0"; elS.textContent = "0";
+      return;
+    }
+    var d = Math.floor(diff / (1000*60*60*24));
+    var h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    var m = Math.floor((diff % (1000*60*60)) / (1000*60));
+    var s = Math.floor((diff % (1000*60)) / 1000);
+    elD.textContent = d;
+    elH.textContent = String(h).padStart(2,"0");
+    elM.textContent = String(m).padStart(2,"0");
+    elS.textContent = String(s).padStart(2,"0");
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
