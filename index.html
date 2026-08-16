@@ -24,6 +24,14 @@ src="https://www.facebook.com/tr?id=1567881268471632&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
+<!-- UTMify: repassa UTMs da landing page para o checkout Hotmart -->
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
 <style>
   :root{
     --bg:#f6f8fb;
@@ -596,6 +604,39 @@ src="https://www.facebook.com/tr?id=1567881268471632&ev=PageView&noscript=1"
   setInterval(tick, 1000);
 })();
 </script>
+
+<!-- Fallback: garante que os parâmetros de campanha cheguem aos links do checkout Hotmart -->
+<script>
+(function(){
+  var trackingParams = [
+    'utm_source','utm_medium','utm_campaign','utm_term','utm_content',
+    'src','sck','xcod','fbclid','gclid'
+  ];
+
+  function forwardTrackingParams(){
+    var current = new URLSearchParams(window.location.search);
+    document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function(el){
+      try {
+        var url = new URL(el.href, window.location.href);
+        trackingParams.forEach(function(key){
+          var value = current.get(key);
+          if(value && !url.searchParams.has(key)){
+            url.searchParams.set(key, value);
+          }
+        });
+        el.href = url.toString();
+      } catch(e) {}
+    });
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', forwardTrackingParams);
+  } else {
+    forwardTrackingParams();
+  }
+})();
+</script>
+
 <script>
 (function(){
   function track(id, value){
