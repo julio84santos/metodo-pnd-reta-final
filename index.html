@@ -176,14 +176,21 @@ h1,h2,h3,p{margin-top:0}
 .apostilas:before{content:"";position:absolute;width:180px;height:180px;left:-65px;top:100px;background-image:radial-gradient(var(--pink) 2.2px,transparent 2.2px);background-size:15px 15px;opacity:.6;transform:rotate(9deg)}
 .apostila-note{max-width:820px;margin:0 auto 34px;padding:16px 18px;background:#fff;border:2px dashed var(--fg);border-radius:18px;text-align:center;font-size:13px}
 .apostila-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.apostila-card{position:relative;background:#fff;border:2px solid var(--fg);border-radius:18px;padding:18px;min-height:170px;display:flex;flex-direction:column;box-shadow:5px 5px 0 var(--border);transition:.25s cubic-bezier(.34,1.56,.64,1)}
+.apostila-card{position:relative;background:#fff;border:2px solid var(--fg);border-radius:18px;padding:18px;min-height:205px;display:flex;flex-direction:column;box-shadow:5px 5px 0 var(--border);transition:.25s cubic-bezier(.34,1.56,.64,1)}
 .apostila-card:hover{transform:translateY(-3px) rotate(-.4deg)}
 .apostila-card.general{background:#F3E8FF;box-shadow:6px 6px 0 #C4B5FD}
 .apostila-index{font-family:"Outfit";font-size:12px;font-weight:800;color:var(--accent)}
 .apostila-card h3{font-size:18px;line-height:1.1;margin:8px 0 7px}
 .apostila-card p{font-size:11px;color:var(--muted-fg);margin:0 0 15px}
-.apostila-link{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;min-height:42px;border:2px solid var(--fg);border-radius:999px;background:var(--muted);font-size:11px;font-weight:800;text-decoration:none;cursor:not-allowed;opacity:.8}
-.apostila-link.active{background:var(--accent);color:#fff;cursor:pointer;box-shadow:3px 3px 0 var(--fg)}
+.apostila-actions{margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.apostila-link{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:52px;padding:7px 6px;border:2px solid var(--fg);border-radius:14px;background:var(--muted);text-align:center;text-decoration:none;cursor:not-allowed;opacity:.82;line-height:1.15}
+.apostila-link strong{font-family:"Outfit";font-size:10px;font-weight:800}
+.apostila-link small{margin-top:3px;font-size:8px;font-weight:700;opacity:.72}
+.apostila-link.essential{background:#fff}
+.apostila-link.complete{background:#EDE9FE}
+.apostila-link.active{cursor:pointer;opacity:1;box-shadow:3px 3px 0 var(--fg);transition:.2s cubic-bezier(.34,1.56,.64,1)}
+.apostila-link.essential.active{background:#fff;color:var(--fg)}
+.apostila-link.complete.active{background:var(--accent);color:#fff}
 .apostila-link.active:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--fg)}
 .dev-tip{margin-top:24px;font-size:11px;color:var(--muted-fg);text-align:center}
 
@@ -265,7 +272,7 @@ footer strong{color:#fff}
   section{padding:64px 0}.hero{padding:48px 0 62px}.hero h1{font-size:46px}.hero-actions{display:grid}.btn{width:100%;box-shadow:2px 2px 0 var(--fg)}
   .hero-meta{display:grid;grid-template-columns:1fr 1fr}.meta-chip{justify-content:center}.exam-clock{gap:5px}.clock-label{width:100%}.clock-box{min-width:48px;box-shadow:2px 2px 0 var(--fg)}
   .price-star{width:108px;height:108px;right:-15px;top:-22px}.float-sticker{display:none}.shape{display:none}.hero:before{display:none}
-  .bento{gap:12px}.apostila-grid{grid-template-columns:1fr 1fr;gap:11px}.apostila-card{min-height:155px;padding:14px}.apostila-card h3{font-size:15px}.apostila-card p{font-size:10px}
+  .bento{gap:12px}.apostila-grid{grid-template-columns:1fr 1fr;gap:11px}.apostila-card{min-height:230px;padding:14px}.apostila-card h3{font-size:15px}.apostila-card p{font-size:10px}.apostila-actions{grid-template-columns:1fr}.apostila-link{min-height:46px}
   .testimonials{grid-template-columns:1fr 1fr;gap:11px}.testimonial{box-shadow:3px 3px 0 var(--border)}.testimonial-meta span{display:none}
   .guarantee{grid-template-columns:1fr;text-align:center;padding:23px}.gicon{margin:auto}.sticky{display:block}footer{padding-bottom:115px}
   .section-title{font-size:36px}.plan{padding:24px}.popular-star{width:103px;height:103px;top:-40px}.price-row strong{font-size:48px}
@@ -441,13 +448,12 @@ footer strong{color:#fff}
 <section id="apostilas" class="apostilas">
   <div class="container">
     <div class="section-head">
-      <span class="kicker">Nova área preparada para expansão</span>
+      <span class="kicker">Materiais por área</span>
       <h2 class="section-title">Apostilas PND 2026 <span class="u">por área.</span></h2>
-      <p class="section-sub">Os campos já estão estruturados para receber links individuais futuramente. Enquanto isso, aparecem como “Link em breve”.</p>
+      <p class="section-sub">Cada área agora possui dois acessos separados: um para o material Essencial e outro para o material Completo.</p>
     </div>
-    <div class="apostila-note"><strong>Como será ativado:</strong> cada card tem um campo de URL centralizado no código. Ao preencher o link de uma área, o botão é ativado automaticamente — sem precisar redesenhar a página.</div>
+    <div class="apostila-note"><strong>Escolha seu acesso:</strong> use o botão Essencial ou Completo conforme o seu pacote. Os links serão liberados à medida que os materiais forem cadastrados.</div>
     <div class="apostila-grid" id="apostila-grid"></div>
-    <p class="dev-tip">Os links estão centralizados no objeto <strong>APOSTILA_LINKS</strong> no final do arquivo.</p>
   </div>
 </section>
 
@@ -572,31 +578,31 @@ footer strong{color:#fff}
 <div class="lightbox" id="lightbox" aria-hidden="true"><button type="button" aria-label="Fechar">×</button><img src="" alt="Depoimento ampliado"></div>
 
 <script>
-/* CAMPOS PARA LINKS FUTUROS DAS APOSTILAS
-   Basta substituir "" pela URL correspondente. O botão do card será ativado automaticamente. */
+/* LINKS DAS APOSTILAS POR PLANO
+   Preencha "essencial" e "completo" com as URLs correspondentes de cada área. */
 const APOSTILA_LINKS = {
-  "formacao-geral-docente":"",
-  "arte":"",
-  "ciencias-biologicas":"",
-  "ciencias-da-natureza":"",
-  "ciencias-sociais":"",
-  "computacao":"",
-  "danca":"",
-  "educacao-fisica":"",
-  "filosofia":"",
-  "fisica":"",
-  "geografia":"",
-  "historia":"",
-  "letras-espanhol":"",
-  "letras-ingles":"",
-  "letras-portugues":"",
-  "letras-portugues-espanhol":"",
-  "letras-portugues-ingles":"",
-  "matematica":"",
-  "musica":"",
-  "pedagogia":"",
-  "quimica":"",
-  "teatro":""
+  "formacao-geral-docente":{essencial:"",completo:""},
+  "arte":{essencial:"",completo:""},
+  "ciencias-biologicas":{essencial:"",completo:""},
+  "ciencias-da-natureza":{essencial:"",completo:""},
+  "ciencias-sociais":{essencial:"",completo:""},
+  "computacao":{essencial:"",completo:""},
+  "danca":{essencial:"",completo:""},
+  "educacao-fisica":{essencial:"",completo:""},
+  "filosofia":{essencial:"",completo:""},
+  "fisica":{essencial:"",completo:""},
+  "geografia":{essencial:"",completo:""},
+  "historia":{essencial:"",completo:""},
+  "letras-espanhol":{essencial:"",completo:""},
+  "letras-ingles":{essencial:"",completo:""},
+  "letras-portugues":{essencial:"",completo:""},
+  "letras-portugues-espanhol":{essencial:"",completo:""},
+  "letras-portugues-ingles":{essencial:"",completo:""},
+  "matematica":{essencial:"",completo:""},
+  "musica":{essencial:"",completo:""},
+  "pedagogia":{essencial:"",completo:""},
+  "quimica":{essencial:"",completo:""},
+  "teatro":{essencial:"",completo:""}
 };
 const APOSTILAS = [
   ["formacao-geral-docente","00","Formação Geral Docente","Portaria Inep nº 315/2025 · 17 páginas","general"],
@@ -625,14 +631,17 @@ const APOSTILAS = [
 (function renderApostilas(){
   const grid=document.getElementById('apostila-grid');
   if(!grid)return;
+  function makeLink(label,url,variant,icon){
+    return url
+      ? `<a class="apostila-link ${variant} active" href="${url}" target="_blank" rel="noopener"><strong>${icon} ${label}</strong><small>Acessar material</small></a>`
+      : `<span class="apostila-link ${variant}" aria-disabled="true"><strong>${icon} ${label}</strong><small>Em breve</small></span>`;
+  }
   APOSTILAS.forEach(([id,index,nome,meta,type])=>{
-    const url=APOSTILA_LINKS[id]||"";
+    const links=APOSTILA_LINKS[id]||{essencial:"",completo:""};
     const card=document.createElement('article');
     card.className='apostila-card'+(type==='general'?' general':'');
-    const link=url
-      ? `<a class="apostila-link active" href="${url}" target="_blank" rel="noopener">Acessar apostila →</a>`
-      : `<span class="apostila-link" aria-disabled="true">Link em breve</span>`;
-    card.innerHTML=`<span class="apostila-index">${index}</span><h3>${nome}</h3><p>${meta}</p>${link}`;
+    const actions=`<div class="apostila-actions">${makeLink('Essencial',links.essencial,'essential','📘')}${makeLink('Completo',links.completo,'complete','⭐')}</div>`;
+    card.innerHTML=`<span class="apostila-index">${index}</span><h3>${nome}</h3><p>${meta}</p>${actions}`;
     grid.appendChild(card);
   });
 })();
