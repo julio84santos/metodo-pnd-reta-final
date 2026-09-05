@@ -177,7 +177,7 @@ h1,h2,h3,p{margin-top:0}
 .apostila-note{max-width:820px;margin:0 auto 34px;padding:16px 18px;background:#fff;border:2px dashed var(--fg);border-radius:18px;text-align:center;font-size:13px}
 .apostila-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .apostila-card{position:relative;background:#fff;border:2px solid var(--fg);border-radius:18px;padding:14px;display:flex;flex-direction:column;box-shadow:5px 5px 0 var(--border);transition:.25s cubic-bezier(.34,1.56,.64,1)}
-.apostila-capa{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border:2px solid var(--fg);border-radius:12px;background:var(--muted);margin-bottom:11px}
+.apostila-capa{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;object-position:center;border:2px solid var(--fg);border-radius:12px;background:#fff;margin-bottom:11px}
 .apostila-card:hover{transform:translateY(-3px) rotate(-.4deg)}
 .apostila-card.general{background:#F3E8FF;box-shadow:6px 6px 0 #C4B5FD}
 .apostila-index{font-family:"Outfit";font-size:12px;font-weight:800;color:var(--accent)}
@@ -643,7 +643,7 @@ const APOSTILAS = [
     const card=document.createElement('article');
     card.className='apostila-card'+(type==='general'?' general':'');
     const actions=`<div class="apostila-actions">${makeLink('Essencial',links.essencial,'essential','📘',nome)}${makeLink('Completo',links.completo,'complete','⭐',nome)}</div>`;
-    const capa=`<img class="apostila-capa" src="capas/${id}.webp" loading="lazy" width="360" height="480" alt="Capa da apostila de ${nome} — PND 2026">`;
+    const capa=`<img class="apostila-capa" src="capas/${id}.webp" loading="lazy" width="600" height="800" alt="Capa da apostila de ${nome} — PND 2026">`;
     const aviso=nota?`<span class="apostila-nota">${nota}</span>`:'';
     card.innerHTML=`${capa}<span class="apostila-index">${index}</span><h3>${nome}</h3><p>${meta}</p>${aviso}${actions}`;
     grid.appendChild(card);
